@@ -1,38 +1,45 @@
-{
-  "Name" : "Jane Doe",
-  "Sex" : "f",
-  "Born" : "1876",
-  "Died" : "1956",
-  "Father" : "Petreus de Milliano",
-  "Mother" : "Sophia van Damme",
+[{
+   "Name": "Jane Doe",
+   "Sex": "f",
+   "Born": "1876",
+   "Died": "1956",
+   "Father": "Petreus de Milliano",
+   "Mother": "Sophia van Damme"
+  },
+  {
+    "Name": "Jane Ramirez",
+    "Sex": "f",
+    "Born": "1102",
+    "Died": "--",
+    "Father": "Themistocles Merovech",
+    "Mother": "Amara Floros"
+  },
 
-  "Name" : "Jane Ramirez",
-  "Sex" : "f",
-  "Born" : "1102",
-  "Died" : "--",
-  "Father" : "Themistocles Merovech",
-  "Mother" : "Amara Floros",
+  {
+    "Name" : "Kobe Bryant",
+   "Sex" : "m",
+   "Born" : "1978",
+   "Died" : "2020",
+   "Father" : "Joe Bryant",
+   "Mother" : "Pam Bryant"
+  },
 
-  "Name" : "Kobe Bryant",
-  "Sex" : "m",
-  "Born" : "1978",
-  "Died" : "2020",
-  "Father" : "Joe Bryant",
-  "Mother" : "Pam Bryant",
+  {
+    "Name" : "Jane Austen",
+    "Sex" : "f",
+    "Born" : "1775",
+    "Died" : "1817",
+    "Father" : "George Austen",
+    "Mother" : "Cassandra Austen"
+  },
 
-  "Name" : "Jane Austen",
-  "Sex" : "f",
-  "Born" : "1775",
-  "Died" : "1817",
-  "Father" : "George Austen",
-  "Mother" : "Cassandra Austen",
-
-  "Name" : "Alan Rickman",
-  "Sex" : "m",
-  "Born" : "1946",
-  "Died" : "2016",
-  "Father" : "Bernard Rickman",
-  "Mother" : "Margaret Bartlett"
-}
+  {
+    "Name" : "Alan Rickman",
+    "Sex" : "m",
+    "Born" : "1946",
+    "Died" : "2016",
+    "Father" : "Bernard Rickman",
+    "Mother" : "Margaret Bartlett"
+  }]
 
 
