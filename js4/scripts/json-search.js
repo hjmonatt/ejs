@@ -53,14 +53,14 @@ const namesSearch = [
 ]
 
 //findName() method - traverses through array looking for the value typed in text box
-function findName() {
-
+function findName()
+{
     //collecting value
     let searchValue = document.getElementById("findName").value;
 
     //loop through array
-    for (let i = 0; i < namesSearch.length; i++) {
-
+    for (let i = 0; i < namesSearch.length; i++)
+    {
         //condensing name
         let fullName = namesSearch[i].fName + " " + namesSearch[i].lName;
 
@@ -80,9 +80,9 @@ function findName() {
 
         }
         //if name provided doesn't match any in array, display message that no person was found
-        if (searchValue.toUpperCase() !== namesSearch[i].fName.toUpperCase() || searchValue.toUpperCase() !== fullName.toUpperCase()) {
+        if (searchValue.toUpperCase() !== namesSearch[i].fName.toUpperCase() || searchValue.toUpperCase() !== fullName.toUpperCase())
+        {
             document.getElementById("found").innerHTML = "No person found.";
-
         }
 
     }
