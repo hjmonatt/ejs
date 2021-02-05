@@ -1,7 +1,7 @@
 //let form = document.getElementById("searchNames");
 //form.onsubmit=filter;
 
-let namesSearch = [
+const namesSearch = [
                     {
                         "fName": "Jane",
                         "lName": "Doe",
@@ -14,7 +14,7 @@ let namesSearch = [
 
                     {
                         "fName": "Jane",
-                        "lName" : "Ramirez",
+                        "lName": "Ramirez",
                         "sex": "f",
                         "born": "1102",
                         "died": "--",
@@ -55,9 +55,9 @@ let namesSearch = [
 ]
 //console.log(namesSearch);
 
-let findName = document.getElementById("findName").value;
+//let findName = document.getElementById("findName").value;
 
-namesSearch.filter( record => record.fName === findName);
+//namesSearch[i].filter( nameSearch => nameSearch[i].fName === searchValue);
 
 
 /**
@@ -74,14 +74,33 @@ document.getElementById("found").innerHTML =
 
  */
 
+//let jane = "Jane";
+//console.log(namesSearch.filter(n => n.fName === jane.toUpperCase()));
+
+
 function filter() {
+
+
     let searchValue = document.getElementById("findName").value;
+
     //console.log(searchValue);
+
     //console.log(namesSearch.length);
+    let results = [];
+//let fullName = namesSearch[i].fName + " " + namesSearch[i].lName;
+
     for (let i = 0; i < namesSearch.length; i++) {
-        if (searchValue == namesSearch[i].fName) {
-            //console.log(namesSearch[i].fName);
-            document.getElementById("found").innerHTML =
+
+        let fullName = namesSearch[i].fName + " " + namesSearch[i].lName;
+        //let dups = namesSearch.filter(it => it.fName.includes('jane'));
+        let jane = "jane";
+        //let parsedArr = JSON.parse(namesSearch);
+
+        if (searchValue.toUpperCase() === namesSearch[i].fName.toUpperCase() || searchValue.toUpperCase() === fullName.toUpperCase())
+        {
+
+            return document.getElementById("found").innerHTML =
+
                 "Name: " + namesSearch[i].fName + " " + namesSearch[i].lName +
                 "<br>Sex: " + namesSearch[i].sex +
                 "<br>Born: " + namesSearch[i].born +
@@ -90,9 +109,18 @@ function filter() {
                 "<br>Mother: " + namesSearch[i].mother;
 
         }
+        if(searchValue.toUpperCase() !== namesSearch[i].fName.toUpperCase() || searchValue.toUpperCase() !== fullName.toUpperCase())
+        {
+            document.getElementById("found").innerHTML = "No person found.";
+
+        }
 
     }
 }
+
+
+
+
 
 
 
