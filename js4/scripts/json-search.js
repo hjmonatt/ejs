@@ -1,6 +1,4 @@
-//let form = document.getElementById("searchNames");
-//form.onsubmit=filter;
-
+//JSON array
 const namesSearch = [
                     {
                         "fName": "Jane",
@@ -53,51 +51,23 @@ const namesSearch = [
                     }
 
 ]
-//console.log(namesSearch);
 
-//let findName = document.getElementById("findName").value;
+//findName() method - traverses through array looking for the value typed in text box
+function findName() {
 
-//namesSearch[i].filter( nameSearch => nameSearch[i].fName === searchValue);
-
-
-/**
- *
- *
-
-document.getElementById("found").innerHTML =
-    "Name: " + namesSearch.fName + " " + namesSearch.lName + "<br>" +
-    "Sex: " + namesSearch.sex + "<br>" +
-    "Born: " + namesSearch.born + "<br>" +
-    "Died: " + namesSearch.died + "<br>" +
-    "Father: " + namesSearch.father + "<br>" +
-    "Mother: " + namesSearch.mother;
-
- */
-
-//let jane = "Jane";
-//console.log(namesSearch.filter(n => n.fName === jane.toUpperCase()));
-
-
-function filter() {
-
-
+    //collecting value
     let searchValue = document.getElementById("findName").value;
 
-    //console.log(searchValue);
-
-    //console.log(namesSearch.length);
-    let results = [];
-//let fullName = namesSearch[i].fName + " " + namesSearch[i].lName;
-
+    //loop through array
     for (let i = 0; i < namesSearch.length; i++) {
 
+        //condensing name
         let fullName = namesSearch[i].fName + " " + namesSearch[i].lName;
-        //let dups = namesSearch.filter(it => it.fName.includes('jane'));
-        let jane = "jane";
-        //let parsedArr = JSON.parse(namesSearch);
 
-        if (searchValue.toUpperCase() === namesSearch[i].fName.toUpperCase() || searchValue.toUpperCase() === fullName.toUpperCase())
-        {
+        let jane = "jane";
+
+        //conditional for names in array, case does not matter
+        if (searchValue.toUpperCase() === namesSearch[i].fName.toUpperCase() || searchValue.toUpperCase() === fullName.toUpperCase()) {
 
             return document.getElementById("found").innerHTML =
 
@@ -109,8 +79,8 @@ function filter() {
                 "<br>Mother: " + namesSearch[i].mother;
 
         }
-        if(searchValue.toUpperCase() !== namesSearch[i].fName.toUpperCase() || searchValue.toUpperCase() !== fullName.toUpperCase())
-        {
+        //if name provided doesn't match any in array, display message that no person was found
+        if (searchValue.toUpperCase() !== namesSearch[i].fName.toUpperCase() || searchValue.toUpperCase() !== fullName.toUpperCase()) {
             document.getElementById("found").innerHTML = "No person found.";
 
         }
@@ -119,34 +89,37 @@ function filter() {
 }
 
 
+//console.log(namesSearch);
+
+//let findName = document.getElementById("findName").value;
+
+//namesSearch[i].filter( nameSearch => nameSearch[i].fName === searchValue);
 
 
+/**
+ *
+ *
 
+ document.getElementById("found").innerHTML =
+ "Name: " + namesSearch.fName + " " + namesSearch.lName + "<br>" +
+ "Sex: " + namesSearch.sex + "<br>" +
+ "Born: " + namesSearch.born + "<br>" +
+ "Died: " + namesSearch.died + "<br>" +
+ "Father: " + namesSearch.father + "<br>" +
+ "Mother: " + namesSearch.mother;
 
+ */
 
-    function search1(){
+//let jane = "Jane";
+//console.log(namesSearch.filter(n => n.fName === jane.toUpperCase()));
 
-        const obj = JSON.parse(namesSearch);
+//let parsedArr = JSON.parse(namesSearch);
+//let dups = namesSearch.filter(it => it.fName.includes('jane'));
+//console.log(searchValue);
 
-        for(i = 0; i < namesSearch.length; i++)
-        {
-            if(namesSearch[i].names.fName === findName)
-            {
-
-                document.getElementById("found").innerHTML =
-                    "Name: " + namesSearch.fName + " " + namesSearch.lName +
-                    "Sex: " + namesSearch.sex +
-                    "Born: " + namesSearch.born +
-                    "Died: " + namesSearch.died +
-                    "Father: " + namesSearch.father +
-                    "Mother: " + namesSearch.mother;
-
-            }
-            else
-            {
-                document.getElementById("found").innerHTML = "No person found."
-            }
-        }
+//console.log(namesSearch.length);
+//let results = [];
+//let fullName = namesSearch[i].fName + " " + namesSearch[i].lName;
 
 
         //namesSearch = JSON.stringify(obj);
@@ -169,4 +142,3 @@ function filter() {
 
 
     //namesSearch.names.filter( record => record.fName === findName);
-}
